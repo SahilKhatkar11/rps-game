@@ -25,7 +25,7 @@ No installation required — just open the link and start using the app instantl
 
 ## ✨ Features
 
-- 🧠 **Adaptive AI Strategies**:
+- 🧠 **Adaptive Algorithmic Strategies**:
   - **Markov Chain**: 2nd-order transition matrix tracking human pattern recognition and predictive countering.
   - **Win-Stay Lose-Shift**: Behavioral game theory strategy modeling real-world psychology.
   - **Frequency Counter**: Tracks human choice frequency bias and exploits overused moves.
