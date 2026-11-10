@@ -11,6 +11,15 @@
 
 ---
 
+## 🌐 Live Demo
+
+Try the live version of the app here:  
+👉 [ScorePilot Live](https://sahilkhatkar11.github.io/rps-game/)
+
+No installation required — just open the link and start using the app instantly.
+
+---
+
 ## ✨ Features
 
 - 🧠 **Adaptive AI Strategies**:
@@ -84,42 +93,6 @@ To preview the production build locally:
 ```bash
 npm run preview
 ```
-
----
-
-## 🌐 Deploying to GitHub Pages
-
-### Method 1: Automatic Deployment via GitHub Actions (Recommended)
-
-This repository includes a pre-configured GitHub Actions workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
-
-1. Push your repository to GitHub:
-   ```bash
-   git push origin main
-   ```
-2. On GitHub, navigate to your repository:
-   - Go to **Settings** > **Pages**.
-   - Under **Build and deployment** > **Source**, select **GitHub Actions**.
-3. Every time you push to the `main` or `master` branch, GitHub Actions will automatically build and publish your game.
-
-### Method 2: Manual CLI Deployment
-
-You can deploy directly to the `gh-pages` branch using the included script:
-
-```bash
-npm run deploy
-```
-
----
-
-## 🛡️ White-Screen Prevention on GitHub Pages
-
-When deploying single-page applications to GitHub Pages, a blank white screen commonly occurs due to incorrect asset paths. This repository prevents this using:
-
-1. **Relative Base Path (`base: './'`)**: Configured in `vite.config.ts` so scripts and stylesheets resolve relative to the repository sub-path (`./assets/...`) rather than domain root (`/assets/...`).
-2. **Dark Theme Inline Styling**: `index.html` includes inline `#0b1120` background color so no white flash occurs during initial bundle hydration.
-3. **Automated `404.html` Generation**: Copies `index.html` to `404.html` at build time so sub-paths and direct reloads never trigger GitHub Pages 404 error screens.
-4. **Resilient GitHub Actions Workflow**: The workflow installs dependencies reliably even if `package-lock.json` is missing or being regenerated.
 
 ---
 
