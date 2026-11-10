@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+/* Strict Single-Page Viewport Rules */
+html {
+  font-size: 105%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: none;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Title & Logo Fonts */
+.font-brand-title {
+  font-family: 'Outfit', 'Syne', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+/* Stretched neon typography for move labels */
+.font-stretched-neon {
+  display: inline-block;
+  transform: scaleY(1.28);
+  transform-origin: center;
+  letter-spacing: 0.18em;
+}
+
+.font-brand-tech {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-brand-sub {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.16em;
+}
+
+/* Deep Backdrop Blur Overlay for Modals */
+.modal-overlay-backdrop {
+  background-color: rgba(3, 7, 18, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+/* Background App UI Blur when Modal is Open */
+.app-bg-blurred {
+  filter: blur(16px) brightness(0.65);
+  -webkit-filter: blur(16px) brightness(0.65);
+  transform: scale(0.98);
+  transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: filter, transform;
+}
+
+.app-bg-normal {
+  filter: blur(0px) brightness(1);
+  -webkit-filter: blur(0px) brightness(1);
+  transform: scale(1);
+  transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: filter, transform;
+}
+
+/* iOS Liquid Glass Blur Material for Developer Footer Container */
+/* iOS Liquid Glass Blur Material for Developer Footer Container */
+.footnote-pill,
+.ios-glass-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.42rem 1.25rem;
+  border-radius: 9999px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(36px) saturate(220%) contrast(110%);
+  -webkit-backdrop-filter: blur(36px) saturate(220%) contrast(110%);
+  box-shadow: 
+    0 10px 35px 0 rgba(0, 0, 0, 0.45),
+    0 2px 10px 0 rgba(0, 0, 0, 0.2),
+    inset 0 -1.5px 2px 0 rgba(255, 255, 255, 0.65),
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  font-size: 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Outfit", sans-serif;
+  color: #f1f5f9;
+  overflow: hidden;
+  user-select: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle iOS bottom border specular light reflection */
+.footnote-pill::before,
+.ios-glass-pill::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.85), transparent);
+  pointer-events: none;
+}
+
+.footnote-pill:hover,
+.ios-glass-pill:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.09) 50%,
+    rgba(255, 255, 255, 0.16) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.42);
+  transform: translateY(-1px) scale(1.02);
+  color: #ffffff;
+  box-shadow: 
+    0 14px 40px 0 rgba(0, 0, 0, 0.5),
+    0 0 20px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 2.5px 0 rgba(255, 255, 255, 0.8),
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Light sheen sweep reflection across the pill on hover */
+.footnote-pill::after,
+.ios-glass-pill::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -120%;
+  width: 60%;
+  height: 220%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: left 0.75s ease;
+  pointer-events: none;
+}
+
+.footnote-pill:hover::after,
+.ios-glass-pill:hover::after {
+  left: 160%;
+}

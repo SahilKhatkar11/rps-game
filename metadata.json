@@ -1,0 +1,6 @@
+{
+  "name": "Rock Paper Scissors Game",
+  "description": "An adaptive React web application for Rock-Paper-Scissors featuring Python game engine execution, responsive design, score tracking, sound effects, and game modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
