@@ -14,7 +14,7 @@
 ## 🌐 Live Demo
 
 Try the live version of the app here:  
-👉 [ScorePilot Live](https://sahilkhatkar11.github.io/rps-game/)
+👉 [RockPaperScissors Game Live](https://sahilkhatkar11.github.io/rps-game/)
 
 No installation required — just open the link and start using the app instantly.
 
