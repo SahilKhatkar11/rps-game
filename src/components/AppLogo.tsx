@@ -1,5 +1,8 @@
 import React from 'react';
-import logoImg from '../assets/images/rps_app_logo_1786029096982.jpg';
+import localLogoImg from '../assets/images/rps_app_logo_1786029096982.jpg';
+
+// Direct GitHub repository file location for zero-dependency static asset delivery
+const GITHUB_REPO_LOGO_URL = 'https://raw.githubusercontent.com/SahilKhatkar11/rps-game/main/public/logo.jpg';
 
 interface AppLogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -26,7 +29,13 @@ export const AppLogo: React.FC<AppLogoProps> = ({ size = 'md' }) => {
       {/* Main Logo Image Container (Squircle) */}
       <div className={`relative ${containerSizes[size]} overflow-hidden border-[1.5px] border-white/35 shadow-md bg-slate-900 shrink-0 flex items-center justify-center transform transition-transform group-hover:scale-105`}>
         <img
-          src={logoImg}
+          src={GITHUB_REPO_LOGO_URL}
+          onError={(e) => {
+            // Graceful fallback to bundled asset if network is offline or before initial push
+            if (e.currentTarget.src !== localLogoImg) {
+              e.currentTarget.src = localLogoImg;
+            }
+          }}
           alt="Rock Paper Scissors Logo"
           referrerPolicy="no-referrer"
           className={`${imageSizes[size]} object-cover object-center transition-transform duration-300 group-hover:scale-110`}

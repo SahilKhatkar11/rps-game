@@ -1,4 +1,7 @@
-# 🎮 Rock Paper Scissors Engine
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SahilKhatkar11/rps-game/main/public/logo.jpg" alt="Rock Paper Scissors Logo" width="130" style="border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+  <h1>🎮 Rock Paper Scissors Engine</h1>
+</div>
 
 [![Deploy to GitHub Pages](https://github.com/SahilKhatkar11/rps-game/actions/workflows/deploy.yml/badge.svg)](https://github.com/SahilKhatkar11/rps-game/actions/workflows/deploy.yml)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
@@ -7,7 +10,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-> An adaptive Rock Paper Scissors web game powered by client-side Python algorithmic strategies, real-time statistics tracking, synthesized retro audio effects, and an iOS-style liquid glass interface.
+> An adaptive Rock Paper Scissors web application powered by intelligent client-side Python algorithmic strategies, real-time statistical tracking, and synthesized retro Web Audio effects. Built with React and Tailwind CSS, it features an iOS-inspired liquid glass interface, zero-scroll responsive layout, tournament series modes, customizable match targets, and an interactive Python decision inspector providing an engaging, modern gaming experience.
 
 ---
 
@@ -32,7 +35,7 @@ No installation required — just open the link and start using the app instantl
 - 📱 **Zero-Scroll Single-Page Design**: Viewport-adaptive layout engineered to fit seamlessly on any display size (mobile, tablet, desktop) without page scrolling.
 - 🔊 **Built-in Web Audio Synthesizer**: Sound effects (countdown ticks, selections, victory fanfares, and tie beeps) synthesized in real time via the Web Audio API—no external audio files required.
 - 📊 **Match & Series Tracking**: Customizable series goals (First to 3, 5, 10, or Endless), win streaks, match champion cards, and clearable history logs.
-- 🚀 **GitHub Pages Static Ready**: Pre-configured with relative asset paths (`base: './'`) and automated GitHub Actions workflow to prevent white-screen 404 errors.
+- ⚡ **Instant Client-Side Execution**: Runs entirely in-browser with zero server latency, local storage persistence, and immediate interactive feedback.
 
 ---
 
